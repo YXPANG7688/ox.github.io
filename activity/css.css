@@ -1,0 +1,32 @@
+body {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+hr.blue {
+    height: 4px;
+    background-color: blue;
+    width: 50%;
+}
+
+hr.black {
+    height: 4px;
+    background-color: black;
+    width: 50%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.player-img {
+    height: 300px;
+    width: 220px;
+    border: 6px solid;
+}
+
+.text {
+    color: purple;
+    font-size: 20px;
+    font-weight: bold;
+}
