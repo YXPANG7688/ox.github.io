@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <script>
+    function checkStrength() {
+      const pw = document.getElementById("password").value;
+      let msg = "";
+      if (pw.length < 6) {
+        msg = "Too short!";
+      } else if (!/[0-9]/.test(pw)) {
+        msg = "Add a number.";
+      } else if (!/[A-Z]/.test(pw)) {
+        msg = "Add a capital letter.";
+      } else if (!/[!@#$%^&*]/.test(pw)) {
+        msg = "Add a symbol.";
+      } else {
+        msg = "Strong password!";
+      }
+      document.getElementById("strength").textContent = msg;
+    }
+  </script>
+</head>
+<body>
+  <h1>Register Account</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="student.html">Student Portal</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <form>
+    <label for="password">Enter Password:</label><br>
+    <input type="password" id="password" onkeyup="checkStrength()" required><br>
+    <p id="strength" style="color: green;"></p>
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
