@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Portal</title>
+  <script>
+    function showCourses() {
+      const courses = ["Web Design", "Java Programming", "Database Systems"];
+      const list = document.getElementById("courseList");
+      list.innerHTML = "";
+      courses.forEach(course => {
+        const item = document.createElement("li");
+        item.textContent = course;
+        list.appendChild(item);
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Student Portal</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="contact.html">Contact</a>
+    <a href="register.html">Register</a>
+  </nav>
+  <button onclick="showCourses()">Show Available Courses</button>
+  <ul id="courseList"></ul>
+</body>
+</html>
